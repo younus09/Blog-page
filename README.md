@@ -1,16 +1,80 @@
-# React + Vite
+# 📝 Blog Page – Full Stack Blog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **full-stack blog application** built using **React**, **Redux**, and **Appwrite** that allows users to create, edit, publish, and manage blog posts with authentication and image uploads.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🔐 **User Authentication**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  - Sign up & login using Appwrite Auth
+  - Protected routes for authenticated users
 
-## Expanding the ESLint configuration
+- ✍️ **Blog Management**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  - Create new blog posts
+  - Edit existing posts
+  - Delete posts
+  - Rich text editor for content
+
+- 🖼️ **Image Upload**
+
+  - Upload featured images for posts
+  - Preview uploaded images
+
+- 🔎 **Slug-Based URLs**
+
+  - SEO-friendly post URLs
+  - Auto-generated slugs from titles
+
+- 🛡️ **Authorization**
+
+  - Only post authors can edit or delete their posts
+
+- ⚡ **State Management**
+  - Global state handled with Redux
+
+---
+
+## 🧑‍💻 Tech Stack
+
+### Frontend
+
+- React
+- React Router
+- Redux Toolkit
+- React Hook Form
+- Tailwind CSS
+
+### Backend / BaaS
+
+- Appwrite
+  - Authentication
+  - TablesDB
+  - Storage (Image Uploads)
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+├── appwrite/        # Appwrite configuration & services
+├── components/      # Reusable UI components
+├── pages/           # Page-level components
+├── redux/           # Redux store & slices
+├── conf/            # Environment configuration
+├── App.jsx
+└── main.jsx
+
+## ⚙️ Environment Setup
+
+Create a .env file in the root directory and add:
+
+VITE_APPWRITE_URL=your_appwrite_endpoint
+VITE_APPWRITE_PROJECT_ID=your_project_id
+VITE_APPWRITE_DATABASE_ID=your_database_id
+VITE_APPWRITE_COLLECTION_ID=your_collection_id
+VITE_APPWRITE_BUCKET_ID=your_bucket_id
+```
